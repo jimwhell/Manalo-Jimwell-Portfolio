@@ -1,0 +1,112 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-collapse {
+  /* border: 1px solid black; */
+}
+
+.invisible {
+  display: none;
+}
+
+.navbar {
+  /* border: 1px solid #fff; */
+}
+
+.navbar-nav {
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, padding 0.3s ease,
+    border-radius 0.3s ease, top 0.3s ease;
+  font-weight: 500;
+}
+
+.router-container {
+  margin: 4rem;
+}
+
+.navbar .nav-link {
+  color: #e2b714;
+}
+
+.nav-item .nav-link {
+  width: 5.5rem;
+}
+
+.logo-img {
+  margin-left: 2rem;
+}
+
+.navbar-scrolled {
+  background-color: rgba(39, 39, 40, 0.95);
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border-radius: 15px;
+  position: fixed;
+  top: 1;
+  transition: background-color 0.3s ease, padding 0.3s ease,
+    border-radius 0.3s ease, top 0.3s ease;
+  z-index: 1000;
+  border: 5px;
+}
+
+.activeLink {
+  background-color: #646669;
+  border-radius: 20px;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  transition: background-color 0.5s ease, padding 0.6s ease,
+    border-radius 0.5s ease;
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+/*Desktop viewport */
+@media only screen and (min-width: 992px) {
+  .invisible {
+    display: block;
+    padding-left: 3rem;
+  }
+
+  .navbar-nav {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .router-container {
+    min-height: 100vh;
+    margin: 12rem 8rem 12rem 8rem;
+  }
+}

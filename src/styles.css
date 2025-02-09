@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Windows XP";
+  src: url("/fonts/windows-xp-tahoma.ttf") format("truetype");
+}
+
+body {
+  font-family: "Windows XP", sans-serif;
+  background-color: #111;
+  color: #e2b714;
+}
