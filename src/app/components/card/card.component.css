@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.img-container .project-img {
+  border-radius: 50px;
+  width: 100%; /* Make the image take full width of its container */
+  height: auto; /* Maintain the aspect ratio */
+  max-width: 600px; /* Set a maximum width */
+}
+
+.card {
+  background-color: #000000;
+  padding: 1rem;
+  border-radius: 50px;
+  color: #e2b714;
+  gap: 1.25rem;
+}
+
+.title-container .project-title {
+  font-size: 3rem;
+  text-align: right;
+}
+
+.card img {
+  border-radius: 50px;
+  height: auto;
+}
+
+.project-description p {
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+  .img-container .project-img {
+    border-radius: 50px;
+    width: 100%;
+    height: auto;
+  }
+
+  .card {
+    background-color: #000000;
+    padding: 3rem;
+    border-radius: 50px;
+    color: #e2b714;
+    gap: 3rem;
+  }
+
+  .title-container .project-title {
+    font-size: 6rem;
+    text-align: right;
+  }
+
+  .project-description p {
+    font-size: 2rem;
+    width: 70%;
+  }
+}

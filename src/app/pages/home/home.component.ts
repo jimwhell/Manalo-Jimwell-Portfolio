@@ -12,4 +12,5 @@ export class HomeComponent {
   mainHeading: string = 'Jimwell Manalo';
   secondaryHeading: string = 'Backend Developer';
   tagline: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ';
+  projectsHeading: string = 'Projects';
 }

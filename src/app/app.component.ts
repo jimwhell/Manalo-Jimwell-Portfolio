@@ -30,6 +30,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 export class AppComponent {
   title = 'portfolio-manalo-jimwell';
   isScrolled: boolean = false;
+  emailAddress: string = 'jimwelllmanalo@gmail.com';
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
