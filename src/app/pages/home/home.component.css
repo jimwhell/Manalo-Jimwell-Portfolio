@@ -44,21 +44,14 @@ img {
 }
 
 .banner-section .main-heading {
-  font-size: 4rem;
+  font-size: 6rem;
   line-height: 0.7;
-}
-
-.banner-headings .secondary-heading {
-  font-size: 2.5rem;
-  line-height: 0.7;
-}
-
-.banner-tagline .tagline {
-  font-size: 1.5rem;
 }
 
 .projects-section .projects-heading {
-  font-size: 4rem;
+  font-size: 6rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 section {
@@ -67,18 +60,33 @@ section {
   gap: 12rem;
 }
 
+.about-section h2 {
+  font-size: 1.95rem;
+  line-height: 1.25;
+}
+
+.projects-container {
+  gap: 6rem;
+}
+
 /* tablet viewport */
 @media only screen and (min-width: 768px) {
   .banner-headings .main-heading {
-    font-size: 6rem;
+    font-size: 8rem;
   }
 
-  .banner-headings .secondary-heading {
-    font-size: 3rem;
-  }
-
-  .banner-section .tagline {
+  .about-section h2 {
     font-size: 2rem;
+  }
+
+  .projects-section .projects-heading {
+    font-size: 8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .projects-container {
+    gap: 8rem;
   }
 }
 
@@ -92,11 +100,12 @@ section {
     font-size: 12rem;
   }
 
-  .banner-headings .secondary-heading {
-    font-size: 5rem;
-  }
-
   .projects-section .projects-heading {
     font-size: 12rem;
+  }
+
+  .about-section h2 {
+    font-size: 2.5rem;
+    line-height: 1.25;
   }
 }

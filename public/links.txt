@@ -1,0 +1,3 @@
+Addbase URL: https://indu-e-commerce.netlify.app
+Server URL: 
+WebPub URL: 

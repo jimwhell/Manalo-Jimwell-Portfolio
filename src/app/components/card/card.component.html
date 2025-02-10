@@ -1,28 +1,45 @@
-<section class="card d-flex justify-content-center w-100">
-  <!-- Title of the project -->
-  <header class="title-container">
-    <h2 class="project-title text-center">Through The Looking Glass</h2>
-  </header>
+<!-- <a href="{{ cardLink }}" class="card-link">
+  <article class="card" style="width: 50rem">
+    <figure>
+      <h2 class="card-title">{{ cardTitle }}</h2>
+      <img
+        class="card-img-top"
+        [src]="imgUrl"
+        alt="Card image"
+        [width]="cardImageWidth"
+        [height]="cardImageHeight"
+      />
+    </figure>
+    <section class="card-body">
+      <p class="card-text">
+        {{ projectDesc }}
+      </p>
+    </section>
+  </article>
+</a> -->
 
-  <!-- Image section -->
+<article class="card" (click)="getLink()">
   <figure
-    class="img-container d-flex justify-content-center align-items-center"
+    class="d-flex justify-content-center align-items-center flex-column gap-4"
   >
+    <h2 class="card-title text-center">{{ project.name }}</h2>
     <img
-      class="project-img"
-      src="/images/through-the-looking-glass.jpg"
-      alt="project 1, through the looking glass"
+      class="card-img"
+      [src]="project.imgUrl"
+      alt="Project image of {{ project.name }}"
     />
-    <!--  caption for the image -->
-    <figcaption class="visually-hidden">
-      Through The Looking Glass project image
-    </figcaption>
   </figure>
-
-  <div class="project-description text-center d-flex justify-content-center">
-    <p>
-      Using HTML5, JS, and CSS, the project challenges viewers to question their
-      understanding through surreal imagery and symbolic motifs.
+  <section
+    class="card-body d-flex justify-content-center align-items-center flex-column"
+  >
+    <p class="card-text text-center">
+      {{ project.desc }}
     </p>
-  </div>
-</section>
+    <div class="technologies-container">
+      <h3 class="text-center">Utilized Technologies</h3>
+      <ul class="technologies-list flex-wrap">
+        <li *ngFor="let tech of project.technologies">{{ tech }}</li>
+      </ul>
+    </div>
+  </section>
+</article>
