@@ -1,0 +1,40 @@
+<article class="profile-content">
+  <ng-container
+    *ngIf="
+      certificateList?.length && mode === 'certifications';
+      else profileContent
+    "
+  >
+    <ng-container *ngFor="let certificate of certificateList">
+      <figure class="cert-image">
+        <img
+          [src]="certificate.imgUrl"
+          [alt]="certificate.name"
+          class="cert-img"
+        />
+      </figure>
+      <div class="cert-details">
+        <ul class="cert-list">
+          <li class="cert-title">{{ certificate.name }}</li>
+          <li class="cert-source">{{ certificate.provider }}</li>
+          <li class="cert-earned">{{ certificate.date }}</li>
+        </ul>
+        <button
+          class="download-btn"
+          (click)="downloadCertificate(certificate.file)"
+        >
+          Download Certificate
+        </button>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-template #profileContent>
+    <figure class="profile-image">
+      <img [src]="imgUrl" [alt]="altText" class="profile-img" />
+    </figure>
+    <div class="profile-description">
+      <p *ngIf="infoText">{{ infoText }}</p>
+    </div>
+  </ng-template>
+</article>
