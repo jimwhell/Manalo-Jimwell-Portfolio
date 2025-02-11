@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Project } from '../../project';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project-card',
@@ -11,4 +12,10 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectCardComponent {
   @Input() project!: Project;
+
+  constructor(private router: Router) {}
+
+  goToProjectDetail(): void {
+    this.router.navigate(['/projects', encodeURIComponent(this.project.name)]);
+  }
 }

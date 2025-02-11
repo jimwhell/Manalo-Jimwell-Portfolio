@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* === Project Detail Container === */
+.project-detail {
+  text-align: center;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Project Title === */
+.project-title h1 {
+  font-size: 6rem;
+  line-height: 0.65;
+  margin-bottom: 0.5rem;
+}
+
+/* === Date & Role === */
+.project-info .project-desc {
+  font-size: 1.75rem;
+  line-height: 0.85;
+  margin-bottom: 1rem;
+}
+
+.project-info p {
+  margin: 0.2rem 0;
+}
+
+/* === Buttons === */
+.button-container {
+  display: flex;
+  flex-direction: column; /* ✅ Mobile first: Stack buttons */
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 2rem 0;
+}
+
+.btn {
+  background: #1a1a1a;
+  color: #fafafa;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  width: 80%;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #e2b714;
+  color: #111111;
+}
+
+/* === Features === */
+.feature {
+  display: flex;
+  flex-direction: column; /* ✅ Mobile first: Stack content */
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.feature img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.feature-description h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+.feature-description h2 {
+  font-size: 2.5rem;
+  line-height: 0.75;
+}
+
+.feature-description p {
+  font-size: 1.25rem;
+  line-height: 0.85;
+}
+
+.project-info {
+  margin-top: 2rem;
+}
+
+.role,
+.date {
+  font-size: 1.5rem;
+}
+
+.project-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* === Tablet View (768px and up) === */
+@media (min-width: 768px) {
+  .button-container {
+    flex-direction: row; /* ✅ Tablet: Side by side buttons */
+    justify-content: center;
+  }
+
+  .btn {
+    width: auto; /* ✅ Tablet: Allow buttons to size naturally */
+  }
+
+  .feature {
+    flex-direction: row; /* ✅ Tablet: Side by side layout */
+    text-align: left;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .feature.reverse {
+    flex-direction: row-reverse; /* ✅ Alternating layout */
+  }
+
+  .feature-description {
+    flex: 1;
+    text-align: left;
+  }
+
+  .project-image {
+    flex: 1;
+  }
+
+  .project-title h1 {
+    font-size: 6rem;
+    line-height: 0.5;
+    max-width: 70%;
+  }
+
+  .project-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feature .feature-title {
+    font-size: 3rem;
+    line-height: 0.75;
+  }
+
+  .feature-description p {
+    font-size: 1.85;
+  }
+}
+
+/* === Desktop View (1024px and up) === */
+@media (min-width: 1024px) {
+  .project-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    /* border: 2px solid red; */
+  }
+
+  .project-title h1 {
+    font-size: 12rem;
+    line-height: 0.5;
+    max-width: 70%;
+  }
+
+  .project-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-info p {
+    margin-bottom: 1rem;
+  }
+
+  .feature img {
+    max-width: 500px; /* ✅ Larger image on desktop */
+  }
+
+  .feature-description h2 {
+    font-size: 1.8rem;
+  }
+
+  .project-desc {
+    font-size: 2.5rem;
+    line-height: 1.25;
+  }
+
+  .role,
+  .date {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.25rem;
+  }
+
+  .feature .feature-title {
+    font-size: 8rem;
+    line-height: 0.75;
+  }
+
+  .feature-description p {
+    font-size: 2rem;
+    line-height: 0.85;
+  }
+}

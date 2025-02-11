@@ -1,0 +1,46 @@
+<section *ngIf="project" class="project-detail">
+  <div class="project-title">
+    <h1>{{ project.name }}</h1>
+  </div>
+
+  <div class="project-info">
+    <p class="project-desc">{{ project.desc }}</p>
+    <p class="role"><strong>Role:</strong> {{ project.role }}</p>
+    <p class="date"><strong>Date:</strong> {{ project.date }}</p>
+  </div>
+
+  <div class="button-container">
+    <button class="btn" (click)="openLink(project.repoLink)">
+      GitHub Repo
+    </button>
+    <button class="btn" (click)="openLink(project.link)">Live Demo</button>
+  </div>
+
+  <div class="project-content">
+    <div *ngIf="project.firstFeatureTitle" class="feature">
+      <div class="feature-description">
+        <h2 class="feature-title">{{ project.firstFeatureTitle }}</h2>
+        <p>{{ project.firstFeatureDescription }}</p>
+      </div>
+      <div class="project-image">
+        <img
+          [src]="project.firstFeatureScreenshot"
+          alt="{{ project.firstFeatureTitle }}"
+        />
+      </div>
+    </div>
+
+    <div *ngIf="project.secondFeatureTitle" class="feature reverse">
+      <div class="feature-description">
+        <h2 class="feature-title">{{ project.secondFeatureTitle }}</h2>
+        <p>{{ project.secondFeatureDescription }}</p>
+      </div>
+      <div class="project-image">
+        <img
+          [src]="project.secondFeatureScreenshot"
+          alt="{{ project.secondFeatureTitle }}"
+        />
+      </div>
+    </div>
+  </div>
+</section>
