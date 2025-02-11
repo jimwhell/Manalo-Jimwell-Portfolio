@@ -74,7 +74,13 @@
 
 .certifications-heading {
   font-size: 5rem;
-  text-align: left;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .certifications-heading {
+    text-align: center;
+  }
 }
 
 /* Desktop Viewport */
@@ -119,5 +125,7 @@
 
   .certifications-heading {
     font-size: 8rem;
+    margin-bottom: 4rem;
+    text-align: left;
   }
 }

@@ -4,4 +4,5 @@ export interface Project {
   desc: string;
   technologies: string[];
   link: string;
+  repoLink: string;
 }

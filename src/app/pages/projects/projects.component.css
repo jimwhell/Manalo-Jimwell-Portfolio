@@ -1,0 +1,49 @@
+/* Mobile-First Styling */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-title {
+  font-size: 6rem;
+  color: #f4b400;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Tablet View */
+@media (min-width: 768px) {
+  .projects-title {
+    font-size: 6rem;
+    text-align: left;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+    gap: 1.75rem;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+  .projects-title {
+    font-size: 12rem;
+    text-align: left;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+  }
+}

@@ -11,22 +11,18 @@ export class ProjectsService {
     {
       name: 'Through the Looking Glass',
       imgUrl: '/images/through-the-looking-glass.jpg',
-      desc: 'A creative project exploring different perspectives.',
+      desc: 'The Indu Returns. Still a mock-ecommerce application, it is built using the MEVN stack.',
       technologies: ['HTML5', 'CSS', 'Bootstrap'],
       link: 'https://throughthelookingglasses.netlify.app/',
+      repoLink: 'https://throughthelookingglasses.netlify.app/',
     },
     {
       name: 'Indu E-Commerce 1.0',
       imgUrl: '/images/addbase.jpg',
       desc: 'A mock-ecommerce website built using Vanillla HTML5, Bootstrap, JavaScript, Express, and Firestore.',
-      technologies: [
-        'HTML5',
-        'Bootstrap',
-        'JavaScript',
-        'ExpressJS',
-        'Firebase',
-      ],
+      technologies: ['HTML5', 'Bootstrap', 'ExpressJS', 'Firebase'],
       link: 'https://indu-e-commerce.netlify.app',
+      repoLink: 'https://throughthelookingglasses.netlify.app/',
     },
     {
       name: 'Indu E-Commerce 2.0',
@@ -34,6 +30,7 @@ export class ProjectsService {
       desc: 'The Indu Returns. Still a mock-ecommerce application, it is built using the MEVN stack.',
       technologies: ['VueJS', 'Express', 'NodeJS', 'MongoDB'],
       link: 'https://google.com',
+      repoLink: 'https://throughthelookingglasses.netlify.app/',
     },
   ];
 

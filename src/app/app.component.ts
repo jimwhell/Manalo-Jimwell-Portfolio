@@ -1,9 +1,10 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
+  Router,
+  NavigationEnd,
   RouterOutlet,
   RouterLink,
-  Router,
   RouterModule,
 } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -34,11 +35,6 @@ export class AppComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    if (window.scrollY > 5) {
-      console.log(window.scrollY);
-      this.isScrolled = true;
-    } else {
-      this.isScrolled = false;
-    }
+    this.isScrolled = window.scrollY > 5;
   }
 }
