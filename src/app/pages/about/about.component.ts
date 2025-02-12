@@ -19,19 +19,19 @@ export class AboutComponent {
       imgUrl: '/images/code.jpg',
       altText: 'Code symbol',
       description:
-        'I am Jimwell Manalo, a third-year college student pursuing a degree in Web Development. Throughout my studies, I have taken a keen interest in the backend shenanigans of web development.',
+        'I am Jimwell Manalo, a third-year web development student. Throughout my studies, which consisted of building simple websites with HTML5 and CSS to developing web applications using various frameworks and backend technologies, I have developed a keen interest in backend development, which I continue to explore and refine.',
     },
     {
       imgUrl: '/images/graduation-hat.jpg',
       altText: 'Graduation hat',
       description:
-        'I enjoy solving complex problems and optimizing backend performance using technologies like Node.js, Express, and databases such as MongoDB and MySQL.',
+        'Through my previous coursework, I have gained experience in developing applications using web technologies such as JavaScript, Node.js, Express, and MongoDB. I have worked on implementing RESTful APIs and creating server-side logic to support the functionality of our web application outputs.',
     },
     {
       imgUrl: '/images/continuous-learning.jpg',
       altText: 'Code symbol',
       description:
-        'Beyond coding, I constantly explore new technologies and methodologies to improve my backend development expertise, staying up to date with the latest trends.',
+        'In addition to backend development, I actively explore front-end development to enhance my versatility as a developer. I refine my CSS skills by creating mock website layouts and implementing design concepts that capture my interest. Furthermore, I have gained experience with frameworks like Angular, enabling me to develop interactive and dynamic user interfaces that complement backend functionality.',
     },
   ];
 

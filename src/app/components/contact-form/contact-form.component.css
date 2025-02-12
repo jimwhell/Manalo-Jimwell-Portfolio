@@ -6,6 +6,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+label {
+  font-size: 2rem;
+}
+
 body {
   background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
   font-size: 12px;
@@ -180,6 +184,15 @@ input {
   outline: none;
 }
 
+.buttons button {
+  background-color: #262626;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  color: #fafafa;
+  width: 100%;
+}
+
 .app-form-button:hover {
   color: #b9134f;
 }
@@ -229,6 +242,10 @@ input {
   .app-title:after {
     display: none;
   }
+
+  label {
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -238,5 +255,9 @@ input {
 
   .screen-body-item {
     padding: 0;
+  }
+
+  label {
+    font-size: 1.5rem;
   }
 }

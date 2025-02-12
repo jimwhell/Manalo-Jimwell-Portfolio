@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Project } from './project';
 import { Technology } from './technology';
 import { Certificate } from './certificate';
+import { Contact } from './contact';
 
 @Injectable({
   providedIn: 'root',
@@ -32,17 +33,18 @@ export class ProjectsService {
       desc: 'A mock e-commerce website built using Vanilla HTML5, Bootstrap, JavaScript, Express, and Firestore.',
       technologies: ['HTML5', 'Bootstrap', 'ExpressJS', 'Firebase'],
       link: 'https://indu-e-commerce.netlify.app',
-      repoLink: 'https://github.com/user/indu-e-commerce-1.0',
+      repoLink: 'https://github.com/jimwhell/INDU-E-Commerce-Addbase.git',
       date: 'September 2022',
       role: 'Frontend Developer',
-      firstFeatureTitle: 'First Feature',
+      firstFeatureTitle: 'Product Filter',
       firstFeatureDescription:
-        'Basic cart functionality that allows users to add and remove items.',
-      firstFeatureScreenshot: '/images/screenshot1.jpg',
-      secondFeatureTitle: 'Second Feature',
+        'Basic product filter that allows for the filtering of displayed products by their category.',
+      firstFeatureScreenshot: 'images/screenshots/category-filter-addbase.jpg',
+      secondFeatureTitle: 'Admin Dashboard',
       secondFeatureDescription:
-        'Firestore integration for real-time updates on product stock.',
-      secondFeatureScreenshot: '/images/screenshot2.jpg',
+        'Features an admin dashboard allowing for creation and removal of products from the database.',
+      secondFeatureScreenshot:
+        '/images/screenshots/admin-functionality-screenshot-server.jpg',
     },
     {
       name: 'Indu E-Commerce 2.0',
@@ -50,17 +52,18 @@ export class ProjectsService {
       desc: 'The Indu Returns. Still a mock e-commerce application, now built using the MEVN stack.',
       technologies: ['VueJS', 'Express', 'NodeJS', 'MongoDB'],
       link: 'https://google.com',
-      repoLink: 'https://github.com/user/indu-e-commerce-2.0',
+      repoLink:
+        'https://github.com/WCSERVER-Group-3/6WCSERVER-WD-303-INDU-E-Commerce.git',
       date: 'June 2023',
-      role: 'Full Stack Developer',
-      firstFeatureTitle: 'First Feature',
+      role: 'Backend Developer',
+      firstFeatureTitle: 'Cart Functionality',
       firstFeatureDescription:
-        'Improved cart functionality with live product updates.',
+        'Implemented a cart functionality which allows for the retrieval, creation, and deletion of cart data from the products listed in the database.',
       firstFeatureScreenshot:
         '/images/screenshots/cart-functionality-screenshot-server.jpg',
-      secondFeatureTitle: 'Second Feature',
+      secondFeatureTitle: 'Mock Order Creation',
       secondFeatureDescription:
-        'A modern, responsive UI with enhanced product filtering and sorting.',
+        "Implemented a mock order creation functionality which retrieves items from a user's cart. This also allows for the retrieval of the order history of an user.",
       secondFeatureScreenshot:
         '/images/screenshots/order-creation-screenshot-server.jpg',
     },
@@ -71,13 +74,13 @@ export class ProjectsService {
       name: 'HTML5',
       icon: '/images/html.jpg',
       description:
-        'Full understanding and experience in the best practices of HTML.',
+        'Understanding and experience in implementing HTML to build the structure of web pages',
     },
     {
       name: 'CSS',
       icon: '/images/css.jpg',
       description:
-        'Mastered the basics of CSS in order to create beautiful UI elements.',
+        'Have a strong understanding of CSS basics and its application in creating UI elements.',
     },
     {
       name: 'JavaScript',
@@ -88,7 +91,7 @@ export class ProjectsService {
       name: 'Node',
       icon: '/images/node.jpg',
       description:
-        'Knowledge in leveraging Node.js to build server-side applications.',
+        'Knowledge and experience in utilizing Node.js to build server-side applications.',
     },
     {
       name: 'MongoDB',
@@ -114,6 +117,27 @@ export class ProjectsService {
     },
   ];
 
+  contact: Contact[] = [
+    {
+      imgUrl: 'icons/github.svg',
+      name: 'Github',
+      description: 'Jimwhell',
+      link: 'https://github.com/jimwhell',
+    },
+    {
+      imgUrl: 'icons/linked-in.svg',
+      name: 'LinkedIn',
+      description: 'Jimwell Manalo',
+      link: 'https://www.linkedin.com/in/jimwell-manalo  ',
+    },
+    {
+      imgUrl: 'icons/mail-logo.svg',
+      name: 'Email',
+      description: 'jimwelllmanalo@gmail.com',
+      link: 'mailto:jimwelllmanalo@gmail.com',
+    },
+  ];
+
   constructor() {}
 
   getProjects(): Project[] {
@@ -130,5 +154,9 @@ export class ProjectsService {
 
   getProjectByName(name: string): Project | undefined {
     return this.projects.find((project) => project.name === name);
+  }
+
+  getContacts(): Contact[] {
+    return this.contact;
   }
 }

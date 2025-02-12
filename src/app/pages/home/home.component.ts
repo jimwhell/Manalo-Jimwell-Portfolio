@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   projectsList: Project[] = [];
-  mainHeading: string = 'Jimwell Manalo';
+  mainHeading: string = 'Hi, I am Jimwell Manalo, a backend developer.';
   aboutText: string =
     'As a third-year web development student, I am passionate about backend development and continuously expanding my skills. Through my coursework, I have gained experience with Node.js, Express, MongoDB, MySQL, and Firestore. I have also built projects utilizing REST APIs, which you can explore below. Learning new technologies and improving my backend expertise keeps me motivated and excited to code.';
   tagline: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ';

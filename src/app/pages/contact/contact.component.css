@@ -1,7 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .form-container {
-  padding: 0 12rem 0 12rem;
+  margin-bottom: 4rem;
 }
 
 .form-heading h1 {
-  font-size: 12rem;
+  font-size: 6rem;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .form-heading {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-heading h1 {
+    font-size: 12rem;
+  }
+
+  .form-container {
+    padding: 0 8rem 0 8rem;
+    margin-bottom: 4rem;
+  }
 }

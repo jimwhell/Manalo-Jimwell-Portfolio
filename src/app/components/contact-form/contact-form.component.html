@@ -16,27 +16,30 @@
       <div class="screen-body-item">
         <div class="app-form">
           <div class="app-form-group">
+            <label for="name">Name:</label>
             <input
               type="text"
+              id="name"
               class="app-form-control"
-              placeholder="NAME"
               [(ngModel)]="form.name"
             />
           </div>
           <div class="app-form-group">
+            <label for="email">Email:</label>
             <input
               type="email"
               class="app-form-control"
-              placeholder="EMAIL"
               [(ngModel)]="form.email"
+              id="email"
             />
           </div>
 
           <div class="app-form-group message">
+            <label for="message">Message:</label>
             <input
               class="app-form-control"
-              placeholder="MESSAGE"
               [(ngModel)]="form.message"
+              id="message"
             />
           </div>
           <div class="app-form-group buttons">

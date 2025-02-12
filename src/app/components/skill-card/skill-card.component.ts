@@ -11,6 +11,13 @@ import { Contact } from '../../contact';
   styleUrl: './skill-card.component.css',
 })
 export class SkillCardComponent {
-  @Input() technology!: Technology;
-  @Input() contact!: Contact;
+  @Input() mode: 'technology' | 'contact' = 'technology';
+  @Input() technology?: Technology;
+  @Input() contact?: Contact;
+
+  navigateToContact() {
+    if (this.contact && this.contact.link) {
+      window.open(this.contact.link, '_blank');
+    }
+  }
 }
