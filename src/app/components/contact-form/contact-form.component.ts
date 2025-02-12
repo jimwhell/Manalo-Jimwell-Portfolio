@@ -30,22 +30,25 @@ export class ContactFormComponent {
 
     emailjs
       .send(
-        'service_whicztg', // EmailJS Service ID
-        'template_bnibr5w', // EmailJS Template ID
+        'service_whicztg',
+        'template_bnibr5w',
         {
           name: this.form.name,
           email: this.form.email,
           message: this.form.message,
         },
-        '68OZZ4vquJYJFi7Y-' // EmailJS Public Key
+        '68OZZ4vquJYJFi7Y-'
       )
       .then((response) => {
-        console.log('Email sent successfully!', response);
         alert('Message sent successfully!');
       })
       .catch((error) => {
-        console.error('Email failed to send:', error);
         alert('Error sending message. Please try again later.');
       });
+    this.form = {
+      name: '',
+      email: '',
+      message: '',
+    };
   }
 }

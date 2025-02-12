@@ -4,4 +4,13 @@ export interface Project {
   desc: string;
   technologies: string[];
   link: string;
+  repoLink: string;
+  date: string;
+  role: string;
+  firstFeatureTitle: string;
+  firstFeatureDescription: string;
+  firstFeatureScreenshot: string;
+  secondFeatureTitle: string;
+  secondFeatureDescription: string;
+  secondFeatureScreenshot: string;
 }

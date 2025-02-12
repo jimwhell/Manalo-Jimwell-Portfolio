@@ -1,0 +1,15 @@
+<div class="skill-card" *ngIf="mode === 'technology' && technology">
+  <img [src]="technology.icon" [alt]="technology.name" class="skill-icon" />
+  <h3>{{ technology.name }}</h3>
+  <p>{{ technology.description }}</p>
+</div>
+
+<div
+  class="skill-card contact-card"
+  *ngIf="mode === 'contact' && contact"
+  (click)="navigateToContact()"
+>
+  <img [src]="contact.imgUrl" [alt]="contact.name" class="skill-icon" />
+  <h3>{{ contact.name }}</h3>
+  <p>{{ contact.description }}</p>
+</div>

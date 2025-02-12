@@ -1,1 +1,17 @@
-<p>contact works!</p>
+<section class="contact">
+  <div class="form-heading">
+    <h1>Contact</h1>
+  </div>
+
+  <article class="form-container">
+    <app-contact-form></app-contact-form>
+  </article>
+
+  <div class="contacts-grid">
+    <app-skill-card
+      *ngFor="let contact of contacts"
+      [contact]="contact"
+      mode="contact"
+    ></app-skill-card>
+  </div>
+</section>

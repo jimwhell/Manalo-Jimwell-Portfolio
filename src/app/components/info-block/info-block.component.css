@@ -1,0 +1,180 @@
+/* General Layout */
+.profile-content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Profile & Certification Images */
+.profile-image,
+.cert-image {
+  flex: 1 1 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cert-img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Profile Text */
+.profile-description,
+.cert-details {
+  flex: 1 1 100%;
+  max-width: 100%;
+  color: #fafafa;
+}
+
+.profile-description p {
+  font-size: 1.95rem;
+  line-height: 1.25;
+}
+
+/* Certifications List */
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cert-list li {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  line-height: 0.65;
+  font-size: 1.95rem;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fafafa;
+  background-color: #262626;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #333;
+}
+
+/* Certification Details */
+.cert-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Tablet Viewport */
+@media only screen and (min-width: 768px) {
+  .cert-img,
+  .profile-img {
+    max-width: 300px;
+  }
+}
+
+/* Desktop Viewport */
+@media only screen and (min-width: 992px) {
+  .profile-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .cert-details {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .profile-content {
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+
+  .profile-image,
+  .cert-image {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+
+  .profile-img,
+  .cert-img {
+    max-width: 300px; /* Adjusts size on larger screens */
+  }
+
+  .profile-description {
+    flex: 1 1 70%;
+    max-width: 70%;
+    line-height: 0.95;
+  }
+
+  .cert-details {
+    flex: 1 1 70%;
+    max-width: 70%;
+    color: #e2b714;
+  }
+
+  .profile-description p,
+  .cert-list li {
+    font-size: 2.5rem;
+    line-height: 0.75;
+    text-align: left;
+  }
+
+  .cert-list .cert-title {
+    font-size: 3rem;
+  }
+
+  .download-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fafafa;
+    background-color: #262626;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s;
+  }
+
+  .download-btn:hover {
+    background-color: #444;
+  }
+}

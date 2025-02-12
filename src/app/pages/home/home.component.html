@@ -4,26 +4,24 @@
   >
     <div class="banner-headings d-flex flex-column">
       <h1 class="main-heading">
-        Hi. I am Jimwell Manalo, and I am a backend developer.
+        {{ mainHeading }}
       </h1>
     </div>
   </div>
 
   <div class="about-section">
-    <h2>
+    <p>
       {{ aboutText }}
-    </h2>
+    </p>
   </div>
 
   <div class="projects-section">
     <h2 class="projects-heading text-justify">{{ projectsHeading }}</h2>
-    <div
-      class="projects-container d-flex justify-content-center align-items-center flex-wrap"
-    >
-      <app-card
+    <div class="projects-container">
+      <app-project-card
         *ngFor="let project of projectsList"
         [project]="project"
-      ></app-card>
+      ></app-project-card>
     </div>
   </div>
 </section>

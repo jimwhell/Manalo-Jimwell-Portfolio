@@ -1,1 +1,37 @@
-<p>about works!</p>
+<section class="about">
+  <header class="profile-heading">
+    <h1>About Me</h1>
+  </header>
+
+  <article class="bio">
+    <app-info-block
+      *ngFor="let profileSection of profileSections"
+      [imgUrl]="profileSection.imgUrl"
+      [altText]="profileSection.altText"
+      [infoText]="profileSection.description"
+    ></app-info-block>
+  </article>
+
+  <article class="skills-section">
+    <h2 class="skills-heading">Skills and Experiences</h2>
+    <p class="skills-subheading">
+      A list of my current skills and experience as a student developer.
+    </p>
+
+    <div class="skills-grid">
+      <app-skill-card
+        *ngFor="let technology of technologies"
+        [technology]="technology"
+        mode="technology"
+      ></app-skill-card>
+    </div>
+  </article>
+
+  <article class="certifications-section">
+    <h2 class="certifications-heading">Certifications</h2>
+    <app-info-block
+      [mode]="'certifications'"
+      [certificateList]="certifications"
+    ></app-info-block>
+  </article>
+</section>

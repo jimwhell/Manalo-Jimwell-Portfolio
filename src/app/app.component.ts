@@ -1,9 +1,10 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
+  Router,
+  NavigationEnd,
   RouterOutlet,
   RouterLink,
-  Router,
   RouterModule,
 } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -25,7 +26,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     RouterModule,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'portfolio-manalo-jimwell';
@@ -34,11 +35,14 @@ export class AppComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    if (window.scrollY > 5) {
-      console.log(window.scrollY);
-      this.isScrolled = true;
-    } else {
-      this.isScrolled = false;
-    }
+    this.isScrolled = window.scrollY > 5;
+  }
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
   }
 }
