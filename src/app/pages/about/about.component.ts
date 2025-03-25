@@ -6,10 +6,16 @@ import { Technology } from '../../technology';
 import { ProjectsService } from '../../projects.service';
 import { inject } from '@angular/core';
 import { Certificate } from '../../certificate';
+import { TestimonialCardComponent } from '../../components/testimonial-card/testimonial-card.component';
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [InfoBlockComponent, CommonModule, SkillCardComponent],
+  imports: [
+    InfoBlockComponent,
+    CommonModule,
+    SkillCardComponent,
+    TestimonialCardComponent,
+  ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
 })
@@ -31,17 +37,20 @@ export class AboutComponent {
       imgUrl: '/images/continuous-learning.jpg',
       altText: 'Code symbol',
       description:
-        'In addition to backend development, I actively explore front-end development to enhance my versatility as a developer. I refine my CSS skills by creating mock website layouts and implementing design concepts that capture my interest. Furthermore, I am currently learning frameworks like Angular, enabling me to develop interactive and dynamic user interfaces that complement backend functionality',
+        'In addition to backend development, I actively explore front-end development to enhance my versatility as a developer. I refine my CSS skills by creating mock website layouts and implementing design concepts that capture my interest. Furthermore, I am currently learning frameworks like Angular, enabling me to develop interactive and dynamic user interfaces that complement backend functionality.',
     },
   ];
 
   technologies: Technology[] = [];
   certifications: Certificate[] = [];
+  testimonials: any[] = [];
 
   projectsService: ProjectsService = inject(ProjectsService);
 
   constructor() {
     this.technologies = this.projectsService.getTechnologies();
     this.certifications = this.projectsService.getCertifications();
+    this.testimonials = this.projectsService.getTestimonials();
+    console.log(this.testimonials);
   }
 }

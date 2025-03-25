@@ -13,6 +13,36 @@
   </article>
 
   <article class="skills-section">
+    <h2 class="skills-heading text-start">I specialize in:</h2>
+    <p class="skills-subheading">
+      Building backend applications using Node.js and Express, leveraging
+      JavaScript as a unified language across the stack. I have developed
+      several projects using this approach, as I prefer the efficiency and
+      simplicity of working with a single language for both frontend and
+      backend. At the same time, I’m exploring other technologies to complement
+      my skill set and expand my capabilities.
+    </p>
+  </article>
+
+  <article class="skills-section">
+    <h2 class="skills-heading text-center">Testimonials</h2>
+    <p class="skills-subheading text-center">
+      Hear from clients and collaborators about their experience working with
+      me.
+    </p>
+
+    <div class="testimonials">
+      <app-testimonial-card
+        *ngFor="let testimony of testimonials"
+        [name]="testimony.name"
+        [role]="testimony.role"
+        [message]="testimony.message"
+      >
+      </app-testimonial-card>
+    </div>
+  </article>
+
+  <article class="skills-section">
     <h2 class="skills-heading">Skills and Experiences</h2>
     <p class="skills-subheading">
       A list of my current skills and experience as a student developer.

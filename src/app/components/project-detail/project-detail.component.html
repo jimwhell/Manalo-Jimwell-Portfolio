@@ -13,7 +13,13 @@
     <button class="btn" (click)="openLink(project.repoLink)">
       GitHub Repo
     </button>
-    <button class="btn" (click)="openLink(project.link)">Live Demo</button>
+    <button
+      class="btn"
+      [disabled]="project.name === 'Heart of Paws'"
+      (click)="openLink(project.link)"
+    >
+      {{ project.name }}
+    </button>
   </div>
 
   <div class="project-content">
@@ -39,6 +45,32 @@
         <img
           [src]="project.secondFeatureScreenshot"
           alt="{{ project.secondFeatureTitle }}"
+        />
+      </div>
+    </div>
+
+    <div *ngIf="project.thirdFeatureTitle" class="feature">
+      <div class="feature-description">
+        <h2 class="feature-title">{{ project.thirdFeatureTitle }}</h2>
+        <p>{{ project.thirdFeatureDescription }}</p>
+      </div>
+      <div class="project-image">
+        <img
+          [src]="project.thirdFeatureScreenshot"
+          alt="{{ project.thirdFeatureTitle }}"
+        />
+      </div>
+    </div>
+
+    <div *ngIf="project.fourthFeatureTitle" class="feature reverse">
+      <div class="feature-description">
+        <h2 class="feature-title">{{ project.fourthFeatureTitle }}</h2>
+        <p>{{ project.fourthFeatureDescription }}</p>
+      </div>
+      <div class="project-image">
+        <img
+          [src]="project.fourthFeatureScreenshot"
+          alt="{{ project.fourthFeatureTitle }}"
         />
       </div>
     </div>

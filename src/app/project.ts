@@ -13,4 +13,10 @@ export interface Project {
   secondFeatureTitle: string;
   secondFeatureDescription: string;
   secondFeatureScreenshot: string;
+  thirdFeatureTitle?: string;
+  thirdFeatureDescription?: string;
+  thirdFeatureScreenshot?: string;
+  fourthFeatureTitle?: string;
+  fourthFeatureDescription?: string;
+  fourthFeatureScreenshot?: string;
 }
