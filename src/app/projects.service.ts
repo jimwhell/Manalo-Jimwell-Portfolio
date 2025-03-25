@@ -92,7 +92,7 @@ export class ProjectsService {
       imgUrl: '/images/screenshots/heart-of-paws.jpg',
       desc: 'Served as the backend developer and integrated the functionality in the frontend to build an animal adoption app using the MEAN stack.',
       technologies: ['MongoDB', 'Express', 'NodeJS', 'Angular'],
-      link: 'https://sixwcserver-wd-303-indu-e-commerce-1.onrender.com',
+      link: 'https://heartofpawstarlac.netlify.app',
       repoLink:
         'https://github.com/Heart-of-Paws-Tarlac-Project/Heart-of-Paws-Tarlac-Web-Application.git',
       date: 'March 2025',
