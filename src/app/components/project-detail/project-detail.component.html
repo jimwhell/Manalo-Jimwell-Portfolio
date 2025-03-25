@@ -13,11 +13,7 @@
     <button class="btn" (click)="openLink(project.repoLink)">
       GitHub Repo
     </button>
-    <button
-      class="btn"
-      [disabled]="project.name === 'Heart of Paws'"
-      (click)="openLink(project.link)"
-    >
+    <button class="btn" (click)="openLink(project.link)">
       {{ project.name }}
     </button>
   </div>
